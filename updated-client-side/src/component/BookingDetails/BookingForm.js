@@ -24,24 +24,7 @@ const BookingForm = () => {
     //     }
     //     postDetails();
     // },[])
-    const handleOnBlur = (e) => { //----------------------- handleOnBlur
-        const name = e.target.name;
-        const eValue = e.target.value;
-        const newObject = { ...serviceInfo }
-
-        if (eName === 'title') {
-            newObject.title = eValue;
-        } else if (eName === 'location') {
-            newObject.location = eValue;
-        } else if (eName === 'noOfBathroom') {
-            newObject.noOfBathroom = eValue;
-        } else if (eName === 'noOfBedRoom') {
-            newObject.noOfBedRoom = eValue;
-        } else if (eName === 'price') {
-            newObject.price = eValue;
-        }
-        setServiceInfo(newObject);
-    }
+    
     const handleSubmit =(event)=>{
     
        fetch(`http://localhost:5000/sendInfo`, {
